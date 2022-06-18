@@ -120,10 +120,10 @@ const HomeScreen = ({
             </View>
 
             <FlatList
-                style={styles.flatList}
                 numColumns={4}
                 data={data}
                 renderItem={renderItem}
+                contentContainerStyle={styles.flatList}
             />
 
 
@@ -180,7 +180,8 @@ const styles = StyleSheet.create({
         color: theme.colors.standardWhite
     },
     flatList: {
-        marginBottom: 10,
+        flex: 1,
+        justifyContent: 'center',
     },
     item: {
         width: 65,
